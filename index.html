@@ -91,6 +91,16 @@
             from, to { border-color: transparent; }
             50% { border-color: #0d47a1; }
         }
+        footer {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            text-align: center;
+            font-size: 0.6em;
+            color: #ffffff;
+            background-color: #f0f8ff;
+            padding: 10px 0;
+        }
     </style>
 </head>
 <body>
@@ -110,6 +120,9 @@
     </nav>
     <h1>Welcome to <span style="color: #1565c0;">neluma Tech!</span></h1>
     <p class="typing" id="typing-text"></p>
+    <footer>
+        <p id="footer-text"></p>
+    </footer>
     <script>
         const text = "This page is under maintenance and will be updated soon.";
         let index = 0;
@@ -124,6 +137,8 @@
             }
         }
         typeEffect();
+        
+        document.getElementById("footer-text").innerHTML = `All rights reserved © ${new Date().getFullYear()} neluma Tech`;
     </script>
 </body>
 </html>
