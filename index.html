@@ -16,15 +16,50 @@
             background-color: #f4f4f4;
             text-align: center;
         }
+        nav {
+            position: absolute;
+            top: 0;
+            width: 100%;
+            background-color: #2c3e50;
+            padding: 15px 0;
+            text-align: center;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 1.2em;
+            font-weight: bold;
+        }
         h1 {
             font-size: 3em;
             font-weight: bold;
             color: #2c3e50;
             text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+            animation: fadeIn 2s ease-in-out, bounce 2s infinite alternate;
+        }
+        p {
+            font-size: 1.2em;
+            opacity: 0;
+            animation: fadeIn 3s ease-in-out forwards;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        @keyframes bounce {
+            from { transform: translateY(0); }
+            to { transform: translateY(-10px); }
         }
     </style>
 </head>
 <body>
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#apps">Apps</a>
+        <a href="#contact-us">Contact Us</a>
+        <a href="#about">About</a>
+    </nav>
     <h1>Welcome to Neluma Tech!</h1>
     <p>This page is under maintenance and will be updated soon.</p>
 </body>
